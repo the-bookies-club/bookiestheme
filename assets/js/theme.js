@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Check if random mode is enabled
   const isRandomMode = localStorage.getItem('randomTheme') === 'true';
-  let currentThemeFamily = localStorage.getItem('themeFamily') || 'gruvbox';
-  const currentThemeVariant = localStorage.getItem('themeVariant') || 'dark';
+  let currentThemeFamily = localStorage.getItem('themeFamily') || 'nord';
+  const currentThemeVariant = localStorage.getItem('themeVariant') || 'light';
 
   // If random mode is enabled, select a random theme on page load
   if (isRandomMode) {
@@ -163,8 +163,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (themeToggle) {
     themeToggle.addEventListener('click', function() {
-      const currentFamily = localStorage.getItem('themeFamily') || 'gruvbox';
-      const currentVariant = localStorage.getItem('themeVariant') || 'dark';
+      const currentFamily = localStorage.getItem('themeFamily') || 'nord';
+      const currentVariant = localStorage.getItem('themeVariant') || 'light';
       const newVariant = currentVariant === 'dark' ? 'light' : 'dark';
       applyTheme(currentFamily, newVariant);
     });
