@@ -12,7 +12,8 @@
     {{ if .IsHome }}
       {{ $PageContext = .Site }}
     {{ end }}
-    {{ $posts := where $PageContext.RegularPages "Type" $contentTypeName }}
+    {{ $mainSections := site.Params.mainSections | default (slice $contentTypeName) }}
+    {{ $posts := where $PageContext.RegularPages "Type" "in" $mainSections }}
     {{ $links := where $PageContext.RegularPages "Type" "links" }}
     {{ $images := where $PageContext.RegularPages "Type" "images" }}
     {{ $videos := where $PageContext.RegularPages "Type" "videos" }}
