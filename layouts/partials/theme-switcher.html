@@ -1,23 +1,24 @@
+{{ $default := $.Site.Params.defaultTheme | default "gruvbox" }}
 <div class="theme-switcher" id="theme-switcher">
   <button class="theme-toggle-button" id="theme-toggle-button">
-    <span id="current-theme-name">nord</span>
+    <span id="current-theme-name">{{ $default }}</span>
   </button>
   <div class="theme-options">
     <button class="theme-option" data-theme="random">🎲 random</button>
-    <button class="theme-option" data-theme="gruvbox">gruvbox</button>
-    <button class="theme-option" data-theme="onedark">onedark</button>
-    <button class="theme-option" data-theme="nightowl">nightowl</button>
-    <button class="theme-option" data-theme="palenight">palenight</button>
-    <button class="theme-option" data-theme="everforest">everforest</button>
-    <button class="theme-option" data-theme="catppuccin">catppuccin</button>
-    <button class="theme-option" data-theme="high-contrast">high-contrast</button>
-    <button class="theme-option" data-theme="oxocarbon">oxocarbon</button>
-    <button class="theme-option" data-theme="dracula">dracula</button>
-    <button class="theme-option active" data-theme="nord">nord</button>
-    <button class="theme-option" data-theme="rosepine">rosepine</button>
-    <button class="theme-option" data-theme="tokyonight">tokyonight</button>
-    <button class="theme-option" data-theme="solarized">solarized</button>
-    <button class="theme-option" data-theme="monokai">monokai</button>
-    <button class="theme-option" data-theme="ayu">ayu</button>
+    <button class="theme-option{{ if eq $default "gruvbox" }} active{{ end }}" data-theme="gruvbox">gruvbox</button>
+    <button class="theme-option{{ if eq $default "onedark" }} active{{ end }}" data-theme="onedark">onedark</button>
+    <button class="theme-option{{ if eq $default "nightowl" }} active{{ end }}" data-theme="nightowl">nightowl</button>
+    <button class="theme-option{{ if eq $default "palenight" }} active{{ end }}" data-theme="palenight">palenight</button>
+    <button class="theme-option{{ if eq $default "everforest" }} active{{ end }}" data-theme="everforest">everforest</button>
+    <button class="theme-option{{ if eq $default "catppuccin" }} active{{ end }}" data-theme="catppuccin">catppuccin</button>
+    <button class="theme-option{{ if eq $default "high-contrast" }} active{{ end }}" data-theme="high-contrast">high-contrast</button>
+    <button class="theme-option{{ if eq $default "oxocarbon" }} active{{ end }}" data-theme="oxocarbon">oxocarbon</button>
+    <button class="theme-option{{ if eq $default "dracula" }} active{{ end }}" data-theme="dracula">dracula</button>
+    <button class="theme-option{{ if eq $default "nord" }} active{{ end }}" data-theme="nord">nord</button>
+    <button class="theme-option{{ if eq $default "rosepine" }} active{{ end }}" data-theme="rosepine">rosepine</button>
+    <button class="theme-option{{ if eq $default "tokyonight" }} active{{ end }}" data-theme="tokyonight">tokyonight</button>
+    <button class="theme-option{{ if eq $default "solarized" }} active{{ end }}" data-theme="solarized">solarized</button>
+    <button class="theme-option{{ if eq $default "monokai" }} active{{ end }}" data-theme="monokai">monokai</button>
+    <button class="theme-option{{ if eq $default "ayu" }} active{{ end }}" data-theme="ayu">ayu</button>
   </div>
 </div>

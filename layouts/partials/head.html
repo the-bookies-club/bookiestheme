@@ -24,8 +24,12 @@
 <!-- Critical theme initialization to prevent FOUC -->
 <script>
 (function() {
-  var themeFamily = localStorage.getItem('themeFamily') || 'nord';
-  var themeVariant = localStorage.getItem('themeVariant') || 'light';
+  var defaultThemeFamily = '{{ $.Site.Params.defaultTheme | default "gruvbox" }}';
+  var defaultThemeVariant = '{{ $.Site.Params.defaultThemeVariant | default "dark" }}';
+  window.__defaultThemeFamily = defaultThemeFamily;
+  window.__defaultThemeVariant = defaultThemeVariant;
+  var themeFamily = localStorage.getItem('themeFamily') || defaultThemeFamily;
+  var themeVariant = localStorage.getItem('themeVariant') || defaultThemeVariant;
   document.documentElement.setAttribute('data-theme-family', themeFamily);
   document.documentElement.setAttribute('data-theme-variant', themeVariant);
 })();

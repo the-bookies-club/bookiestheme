@@ -1,24 +1,24 @@
 :root {
-  --bg-primary: #eceff4;
-  --bg-secondary: #e5e9f0;
-  --bg-tertiary: #d8dee9;
-  --text-primary: #2e3440;
-  --text-secondary: #3b4252;
-  --text-link: #5e81ac;
-  --accent: #5e81ac;
-  --accent-hover: #81a1c1;
-  --accent-secondary: #a3be8c;
-  --accent-tertiary: #b48ead;
-  --accent-video: #bf616a;
-  --border: #5e81ac;
-  --menu-bg: #d8dee9;
-  --menu-text: #2e3440;
-  --dropdown-bg: #cbd2d9;
-  --logo-primary: #2e3440;
-  --logo-secondary: #5e81ac;
-  --logo-hover-primary: #81a1c1;
-  --logo-hover-secondary: #2e3440;
-  --hamburger-color: #2e3440;
+  --bg-primary: #282828;
+  --bg-secondary: #282828;
+  --bg-tertiary: #404040;
+  --text-primary: #ebdbb2;
+  --text-secondary: #bdae93;
+  --text-link: #d65d0e;
+  --accent: #d65d0e;
+  --accent-hover: #d65d0e;
+  --accent-secondary: #8ec07c;
+  --accent-tertiary: #83a598;
+  --accent-video: #fb4934;
+  --border: #d65d0e;
+  --menu-bg: #282828;
+  --menu-text: #ebdbb2;
+  --dropdown-bg: #404040;
+  --logo-primary: #fbf1c7;
+  --logo-secondary: #d65d0e;
+  --logo-hover-primary: #d65d0e;
+  --logo-hover-secondary: #fbf1c7;
+  --hamburger-color: #ebdbb2;
 }
 
 [data-theme-family="gruvbox"][data-theme-variant="light"] {
